@@ -1,0 +1,10 @@
+{
+  "module": "../fesm2015/matheo-datepicker-luxon.mjs",
+  "es2020": "../fesm2020/matheo-datepicker-luxon.mjs",
+  "esm2020": "../esm2020/luxon/matheo-datepicker-luxon.mjs",
+  "fesm2020": "../fesm2020/matheo-datepicker-luxon.mjs",
+  "fesm2015": "../fesm2015/matheo-datepicker-luxon.mjs",
+  "typings": "matheo-datepicker-luxon.d.ts",
+  "sideEffects": false,
+  "name": "@matheo/datepicker/luxon"
+}

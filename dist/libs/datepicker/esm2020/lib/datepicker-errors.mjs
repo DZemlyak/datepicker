@@ -1,0 +1,14 @@
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/** @docs-private */
+export function createMissingDateImplError(provider) {
+    return Error(`MatDatepicker: No provider found for ${provider}. You must import one of the following ` +
+        `modules at your application root: MatNativeDateModule, MatMomentDateModule, or provide a ` +
+        `custom implementation.`);
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGF0ZXBpY2tlci1lcnJvcnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi9saWJzL2RhdGVwaWNrZXIvc3JjL2xpYi9kYXRlcGlja2VyLWVycm9ycy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7O0dBTUc7QUFFSCxvQkFBb0I7QUFDcEIsTUFBTSxVQUFVLDBCQUEwQixDQUFDLFFBQWdCO0lBQ3pELE9BQU8sS0FBSyxDQUNSLHdDQUF3QyxRQUFRLHlDQUF5QztRQUN6RiwyRkFBMkY7UUFDM0Ysd0JBQXdCLENBQUMsQ0FBQztBQUNoQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAqIEBsaWNlbnNlXHJcbiAqIENvcHlyaWdodCBHb29nbGUgTExDIEFsbCBSaWdodHMgUmVzZXJ2ZWQuXHJcbiAqXHJcbiAqIFVzZSBvZiB0aGlzIHNvdXJjZSBjb2RlIGlzIGdvdmVybmVkIGJ5IGFuIE1JVC1zdHlsZSBsaWNlbnNlIHRoYXQgY2FuIGJlXHJcbiAqIGZvdW5kIGluIHRoZSBMSUNFTlNFIGZpbGUgYXQgaHR0cHM6Ly9hbmd1bGFyLmlvL2xpY2Vuc2VcclxuICovXHJcblxyXG4vKiogQGRvY3MtcHJpdmF0ZSAqL1xyXG5leHBvcnQgZnVuY3Rpb24gY3JlYXRlTWlzc2luZ0RhdGVJbXBsRXJyb3IocHJvdmlkZXI6IHN0cmluZykge1xyXG4gIHJldHVybiBFcnJvcihcclxuICAgICAgYE1hdERhdGVwaWNrZXI6IE5vIHByb3ZpZGVyIGZvdW5kIGZvciAke3Byb3ZpZGVyfS4gWW91IG11c3QgaW1wb3J0IG9uZSBvZiB0aGUgZm9sbG93aW5nIGAgK1xyXG4gICAgICBgbW9kdWxlcyBhdCB5b3VyIGFwcGxpY2F0aW9uIHJvb3Q6IE1hdE5hdGl2ZURhdGVNb2R1bGUsIE1hdE1vbWVudERhdGVNb2R1bGUsIG9yIHByb3ZpZGUgYSBgICtcclxuICAgICAgYGN1c3RvbSBpbXBsZW1lbnRhdGlvbi5gKTtcclxufVxyXG4iXX0=

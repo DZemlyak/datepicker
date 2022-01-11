@@ -1,0 +1,58 @@
+{
+  "name": "@matheo/datasource",
+  "version": "12.10.0-beta.1",
+  "description": "Reactive Datasource for Angular",
+  "author": {
+    "name": "Mateo Tibaquira",
+    "email": "nestormateo@gmail.com",
+    "url": "http://matheo.co"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "datasource",
+    "rxjs"
+  ],
+  "license": "MIT",
+  "homepage": "http://matheo.co/demos/datasource/",
+  "funding": "https://www.paypal.me/mateotp",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:matheo/angular.git",
+    "directory": "libs/datasource"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=11.0.0",
+    "@angular/core": ">=11.0.0",
+    "@angular/cdk": ">=11.0.0",
+    "@angular/material": ">=11.0.0",
+    "rxjs": "*"
+  },
+  "dependencies": {
+    "lodash": "*",
+    "tslib": "^2.0.0"
+  },
+  "module": "fesm2015/matheo-datasource.mjs",
+  "es2020": "fesm2020/matheo-datasource.mjs",
+  "esm2020": "esm2020/matheo-datasource.mjs",
+  "fesm2020": "fesm2020/matheo-datasource.mjs",
+  "fesm2015": "fesm2015/matheo-datasource.mjs",
+  "typings": "matheo-datasource.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./matheo-datasource.d.ts",
+      "esm2020": "./esm2020/matheo-datasource.mjs",
+      "es2020": "./fesm2020/matheo-datasource.mjs",
+      "es2015": "./fesm2015/matheo-datasource.mjs",
+      "node": "./fesm2015/matheo-datasource.mjs",
+      "default": "./fesm2020/matheo-datasource.mjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "module": "../fesm2015/matheo-datepicker-date-fns.mjs",
+  "es2020": "../fesm2020/matheo-datepicker-date-fns.mjs",
+  "esm2020": "../esm2020/date-fns/matheo-datepicker-date-fns.mjs",
+  "fesm2020": "../fesm2020/matheo-datepicker-date-fns.mjs",
+  "fesm2015": "../fesm2015/matheo-datepicker-date-fns.mjs",
+  "typings": "matheo-datepicker-date-fns.d.ts",
+  "sideEffects": false,
+  "name": "@matheo/datepicker/date-fns"
+}

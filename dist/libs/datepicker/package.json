@@ -1,0 +1,89 @@
+{
+  "name": "@matheo/datepicker",
+  "version": "13.0.0-beta.0",
+  "description": "Angular material date+time picker",
+  "keywords": [
+    "angular",
+    "material",
+    "datepicker",
+    "timepicker"
+  ],
+  "license": "MIT",
+  "homepage": "http://matheo.co/demos/datepicker/",
+  "funding": "https://www.paypal.me/mateotp",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:matheo/angular.git",
+    "directory": "libs/datepicker"
+  },
+  "peerDependencies": {
+    "@angular/animations": ">=11.0.0",
+    "@angular/cdk": ">=11.0.0",
+    "@angular/common": ">=11.0.0",
+    "@angular/core": ">=11.0.0",
+    "@angular/forms": ">=11.0.0",
+    "@angular/material": ">=11.0.0",
+    "date-fns": "^2.23.0",
+    "date-fns-tz": "^1.1.6",
+    "luxon": "^1.28.0",
+    "rxjs": "*"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "module": "fesm2015/matheo-datepicker.mjs",
+  "es2020": "fesm2020/matheo-datepicker.mjs",
+  "esm2020": "esm2020/matheo-datepicker.mjs",
+  "fesm2020": "fesm2020/matheo-datepicker.mjs",
+  "fesm2015": "fesm2015/matheo-datepicker.mjs",
+  "typings": "matheo-datepicker.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./matheo-datepicker.d.ts",
+      "esm2020": "./esm2020/matheo-datepicker.mjs",
+      "es2020": "./fesm2020/matheo-datepicker.mjs",
+      "es2015": "./fesm2015/matheo-datepicker.mjs",
+      "node": "./fesm2015/matheo-datepicker.mjs",
+      "default": "./fesm2020/matheo-datepicker.mjs"
+    },
+    "./core": {
+      "types": "./core/matheo-datepicker-core.d.ts",
+      "esm2020": "./esm2020/core/matheo-datepicker-core.mjs",
+      "es2020": "./fesm2020/matheo-datepicker-core.mjs",
+      "es2015": "./fesm2015/matheo-datepicker-core.mjs",
+      "node": "./fesm2015/matheo-datepicker-core.mjs",
+      "default": "./fesm2020/matheo-datepicker-core.mjs"
+    },
+    "./date-fns": {
+      "types": "./date-fns/matheo-datepicker-date-fns.d.ts",
+      "esm2020": "./esm2020/date-fns/matheo-datepicker-date-fns.mjs",
+      "es2020": "./fesm2020/matheo-datepicker-date-fns.mjs",
+      "es2015": "./fesm2015/matheo-datepicker-date-fns.mjs",
+      "node": "./fesm2015/matheo-datepicker-date-fns.mjs",
+      "default": "./fesm2020/matheo-datepicker-date-fns.mjs"
+    },
+    "./luxon": {
+      "types": "./luxon/matheo-datepicker-luxon.d.ts",
+      "esm2020": "./esm2020/luxon/matheo-datepicker-luxon.mjs",
+      "es2020": "./fesm2020/matheo-datepicker-luxon.mjs",
+      "es2015": "./fesm2015/matheo-datepicker-luxon.mjs",
+      "node": "./fesm2015/matheo-datepicker-luxon.mjs",
+      "default": "./fesm2020/matheo-datepicker-luxon.mjs"
+    },
+    "./src/lib/core": {
+      "types": "./src/lib/core/matheo-datepicker-src-lib-core.d.ts",
+      "esm2020": "./esm2020/src/lib/core/matheo-datepicker-src-lib-core.mjs",
+      "es2020": "./fesm2020/matheo-datepicker-src-lib-core.mjs",
+      "es2015": "./fesm2015/matheo-datepicker-src-lib-core.mjs",
+      "node": "./fesm2015/matheo-datepicker-src-lib-core.mjs",
+      "default": "./fesm2020/matheo-datepicker-src-lib-core.mjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
+  }
+}
