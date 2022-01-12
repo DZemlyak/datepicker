@@ -147,4 +147,3 @@ export declare function MAT_RANGE_DATE_SELECTION_MODEL_FACTORY(parent: MatSingle
  * @docs-private
  */
 export declare const MAT_RANGE_DATE_SELECTION_MODEL_PROVIDER: FactoryProvider;
-//# sourceMappingURL=date-selection-model.d.ts.map

@@ -194,4 +194,3 @@ export declare class MatCalendar<D> implements AfterContentInit, AfterViewChecke
     static ɵfac: i0.ɵɵFactoryDeclaration<MatCalendar<any>, [null, { optional: true; }, { optional: true; }, null]>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MatCalendar<any>, "mat-calendar", ["matCalendar"], { "headerComponent": "headerComponent"; "startAt": "startAt"; "type": "type"; "startView": "startView"; "yearsPerPage": "yearsPerPage"; "yearsPerRow": "yearsPerRow"; "selected": "selected"; "minDate": "minDate"; "maxDate": "maxDate"; "dateFilter": "dateFilter"; "dateClass": "dateClass"; "clockStep": "clockStep"; "twelveHour": "twelveHour"; "comparisonStart": "comparisonStart"; "comparisonEnd": "comparisonEnd"; }, { "selectedChange": "selectedChange"; "yearSelected": "yearSelected"; "monthSelected": "monthSelected"; "dateChanged": "dateChanged"; "viewChanged": "viewChanged"; "_userSelection": "_userSelection"; }, never, never>;
 }
-//# sourceMappingURL=calendar.d.ts.map

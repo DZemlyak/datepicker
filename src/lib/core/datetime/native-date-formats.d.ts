@@ -7,4 +7,3 @@
  */
 import { MatDateFormats } from './date-formats';
 export declare const MAT_NATIVE_DATE_FORMATS: MatDateFormats;
-//# sourceMappingURL=native-date-formats.d.ts.map

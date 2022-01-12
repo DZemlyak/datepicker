@@ -12,4 +12,3 @@ export declare class MatDateFnsModule {
     static ɵmod: i0.ɵɵNgModuleDeclaration<MatDateFnsModule, never, [typeof DateFnsModule], never>;
     static ɵinj: i0.ɵɵInjectorDeclaration<MatDateFnsModule>;
 }
-//# sourceMappingURL=index.d.ts.map

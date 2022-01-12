@@ -287,4 +287,3 @@ export declare abstract class MatDatepickerBase<C extends MatDatepickerControl<D
     static ɵdir: i0.ɵɵDirectiveDeclaration<MatDatepickerBase<any, any, any>, never, never, { "calendarHeaderComponent": "calendarHeaderComponent"; "startAt": "startAt"; "type": "type"; "startView": "startView"; "yearsPerPage": "yearsPerPage"; "yearsPerRow": "yearsPerRow"; "clockStep": "clockStep"; "twelveHour": "twelveHour"; "color": "color"; "touchUi": "touchUi"; "disabled": "disabled"; "xPosition": "xPosition"; "yPosition": "yPosition"; "restoreFocus": "restoreFocus"; "dateClass": "dateClass"; "panelClass": "panelClass"; "opened": "opened"; }, { "yearSelected": "yearSelected"; "monthSelected": "monthSelected"; "viewChanged": "viewChanged"; "openedStream": "opened"; "closedStream": "closed"; }, never>;
 }
 export {};
-//# sourceMappingURL=datepicker-base.d.ts.map

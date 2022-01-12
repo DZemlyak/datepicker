@@ -96,4 +96,3 @@ export declare class NativeDateAdapter extends DateAdapter<Date> {
     static ɵfac: i0.ɵɵFactoryDeclaration<NativeDateAdapter, [{ optional: true; }, null]>;
     static ɵprov: i0.ɵɵInjectableDeclaration<NativeDateAdapter>;
 }
-//# sourceMappingURL=native-date-adapter.d.ts.map

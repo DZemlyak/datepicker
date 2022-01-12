@@ -74,4 +74,3 @@ export declare class MatClockView<D> implements AfterViewInit, AfterContentInit 
     static ɵfac: i0.ɵɵFactoryDeclaration<MatClockView<any>, [null, null, { optional: true; }, { optional: true; }]>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MatClockView<any>, "mat-clock-view", ["matClockView"], { "activeDate": "activeDate"; "selected": "selected"; "minDate": "minDate"; "maxDate": "maxDate"; "dateFilter": "dateFilter"; "dateClass": "dateClass"; "clockStep": "clockStep"; "twelveHour": "twelveHour"; "currentView": "currentView"; }, { "currentViewChange": "currentViewChange"; "selectedChange": "selectedChange"; "_userSelection": "_userSelection"; }, never, never>;
 }
-//# sourceMappingURL=clock-view.d.ts.map

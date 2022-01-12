@@ -85,4 +85,3 @@ export declare function isSameMultiYearView<D>(dateAdapter: DateAdapter<D>, date
  * "startingYear" will render when paged into view.
  */
 export declare function getActiveOffset<D>(dateAdapter: DateAdapter<D>, activeDate: D, minDate: D | null, maxDate: D | null, yearsPerPage: number): number;
-//# sourceMappingURL=multi-year-view.d.ts.map

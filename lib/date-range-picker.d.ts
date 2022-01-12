@@ -15,4 +15,3 @@ export declare class MatDateRangePicker<D> extends MatDatepickerBase<MatDateRang
     static ɵfac: i0.ɵɵFactoryDeclaration<MatDateRangePicker<any>, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MatDateRangePicker<any>, "mat-date-range-picker", ["matDateRangePicker"], {}, {}, never, never>;
 }
-//# sourceMappingURL=date-range-picker.d.ts.map

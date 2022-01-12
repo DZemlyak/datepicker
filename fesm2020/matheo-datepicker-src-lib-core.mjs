@@ -26,7 +26,9 @@ class DateAdapter {
      * @returns A date or `null`.
      */
     getValidDateOrNull(obj) {
-        return this.isDateInstance(obj) && this.isValid(obj) ? obj : null;
+        return this.isDateInstance(obj) && this.isValid(obj)
+            ? obj
+            : null;
     }
     /**
      * Attempts to deserialize a value to a valid date object. This is different from parsing in that
@@ -41,7 +43,7 @@ class DateAdapter {
      *     deserialized into a null date (e.g. the empty string), or an invalid date.
      */
     deserialize(value) {
-        if (value == null || this.isDateInstance(value) && this.isValid(value)) {
+        if (value == null || (this.isDateInstance(value) && this.isValid(value))) {
             return value;
         }
         return this.invalid();
@@ -147,24 +149,55 @@ catch {
 }
 /** The default month names to use if Intl API is not available. */
 const DEFAULT_MONTH_NAMES = {
-    'long': [
-        'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
-        'October', 'November', 'December'
+    long: [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
     ],
-    'short': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    'narrow': ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D']
+    short: [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec',
+    ],
+    narrow: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
 };
 /** The default date names to use if Intl API is not available. */
-const DEFAULT_DATE_NAMES = range(31, i => String(i + 1));
+const DEFAULT_DATE_NAMES = range(31, (i) => String(i + 1));
 /** The default hour names to use if Intl API is not available. */
-const DEFAULT_HOUR_NAMES = range(24, i => i === 0 ? '00' : String(i));
+const DEFAULT_HOUR_NAMES = range(24, (i) => (i === 0 ? '00' : String(i)));
 /** The default minute names to use if Intl API is not available. */
 const DEFAULT_MINUTE_NAMES = range(60, String);
 /** The default day of the week names to use if Intl API is not available. */
 const DEFAULT_DAY_OF_WEEK_NAMES = {
-    'long': ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-    'short': ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-    'narrow': ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+    long: [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+    ],
+    short: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    narrow: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
 };
 /**
  * Matches strings that have the form of a valid RFC 3339 string
@@ -242,15 +275,21 @@ class NativeDateAdapter extends DateAdapter {
     }
     getMonthNames(style) {
         if (SUPPORTS_INTL_API) {
-            const dtf = new Intl.DateTimeFormat(this.locale, { month: style, timeZone: 'utc' });
-            return range(12, i => this._stripDirectionalityCharacters(this._format(dtf, new Date(2017, i, 1))));
+            const dtf = new Intl.DateTimeFormat(this.locale, {
+                month: style,
+                timeZone: 'utc',
+            });
+            return range(12, (i) => this._stripDirectionalityCharacters(this._format(dtf, new Date(2017, i, 1))));
         }
         return DEFAULT_MONTH_NAMES[style];
     }
     getDateNames() {
         if (SUPPORTS_INTL_API) {
-            const dtf = new Intl.DateTimeFormat(this.locale, { day: 'numeric', timeZone: 'utc' });
-            return range(31, i => this._stripDirectionalityCharacters(this._format(dtf, new Date(2017, 0, i + 1))));
+            const dtf = new Intl.DateTimeFormat(this.locale, {
+                day: 'numeric',
+                timeZone: 'utc',
+            });
+            return range(31, (i) => this._stripDirectionalityCharacters(this._format(dtf, new Date(2017, 0, i + 1))));
         }
         return DEFAULT_DATE_NAMES;
     }
@@ -262,14 +301,20 @@ class NativeDateAdapter extends DateAdapter {
     }
     getDayOfWeekNames(style) {
         if (SUPPORTS_INTL_API) {
-            const dtf = new Intl.DateTimeFormat(this.locale, { weekday: style, timeZone: 'utc' });
-            return range(7, i => this._stripDirectionalityCharacters(this._format(dtf, new Date(2017, 0, i + 1))));
+            const dtf = new Intl.DateTimeFormat(this.locale, {
+                weekday: style,
+                timeZone: 'utc',
+            });
+            return range(7, (i) => this._stripDirectionalityCharacters(this._format(dtf, new Date(2017, 0, i + 1))));
         }
         return DEFAULT_DAY_OF_WEEK_NAMES[style];
     }
     getYearName(date) {
         if (SUPPORTS_INTL_API) {
-            const dtf = new Intl.DateTimeFormat(this.locale, { year: 'numeric', timeZone: 'utc' });
+            const dtf = new Intl.DateTimeFormat(this.locale, {
+                year: 'numeric',
+                timeZone: 'utc',
+            });
             return this._stripDirectionalityCharacters(this._format(dtf, date));
         }
         return String(this.getYear(date));
@@ -297,7 +342,7 @@ class NativeDateAdapter extends DateAdapter {
         }
         let result = this._createDateWithOverflow(year, month, date, hours, minutes, seconds, ms);
         // Check that the date wasn't above the upper bound for the month, causing the month to overflow
-        if (result.getMonth() != month && (isDevMode())) {
+        if (result.getMonth() != month && isDevMode()) {
             throw Error(`Invalid date "${date}" for month with index "${month}".`);
         }
         return result;
@@ -320,7 +365,8 @@ class NativeDateAdapter extends DateAdapter {
         if (SUPPORTS_INTL_API) {
             // On IE and Edge the i18n API will throw a hard error that can crash the entire app
             // if we attempt to format a date whose year is less than 1 or greater than 9999.
-            if (this._clampDate && (date.getFullYear() < 1 || date.getFullYear() > 9999)) {
+            if (this._clampDate &&
+                (date.getFullYear() < 1 || date.getFullYear() > 9999)) {
                 date = this.clone(date);
                 date.setFullYear(Math.max(1, Math.min(9999, date.getFullYear())));
             }
@@ -339,7 +385,8 @@ class NativeDateAdapter extends DateAdapter {
         // month. In this case we want to go to the last day of the desired month.
         // Note: the additional + 12 % 12 ensures we end up with a positive number, since JS % doesn't
         // guarantee this.
-        if (this.getMonth(newDate) != ((this.getMonth(date) + months) % 12 + 12) % 12) {
+        if (this.getMonth(newDate) !=
+            (((this.getMonth(date) + months) % 12) + 12) % 12) {
             newDate = this._createDateWithOverflow(this.getYear(newDate), this.getMonth(newDate), 0);
         }
         return newDate;
@@ -360,7 +407,7 @@ class NativeDateAdapter extends DateAdapter {
         return [
             date.getUTCFullYear(),
             this._2digit(date.getUTCMonth() + 1),
-            this._2digit(date.getUTCDate())
+            this._2digit(date.getUTCDate()),
         ].join('-');
     }
     /**
@@ -440,16 +487,16 @@ class NativeDateAdapter extends DateAdapter {
         return dtf.format(d);
     }
 }
-/** @nocollapse */ /** @nocollapse */ NativeDateAdapter.ɵfac = function NativeDateAdapter_Factory(t) { return new (t || NativeDateAdapter)(i0.ɵɵinject(MAT_DATE_LOCALE, 8), i0.ɵɵinject(i1.Platform)); };
-/** @nocollapse */ /** @nocollapse */ NativeDateAdapter.ɵprov = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjectable({ token: NativeDateAdapter, factory: NativeDateAdapter.ɵfac });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NativeDateAdapter, [{
-        type: Injectable
-    }], function () { return [{ type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [MAT_DATE_LOCALE]
-            }] }, { type: i1.Platform }]; }, null); })();
+/** @nocollapse */ /** @nocollapse */ NativeDateAdapter.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NativeDateAdapter, deps: [{ token: MAT_DATE_LOCALE, optional: true }, { token: i1.Platform }], target: i0.ɵɵFactoryTarget.Injectable });
+/** @nocollapse */ /** @nocollapse */ NativeDateAdapter.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NativeDateAdapter });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NativeDateAdapter, decorators: [{
+            type: Injectable
+        }], ctorParameters: function () { return [{ type: undefined, decorators: [{
+                    type: Optional
+                }, {
+                    type: Inject,
+                    args: [MAT_DATE_LOCALE]
+                }] }, { type: i1.Platform }]; } });
 
 /**
  * @license
@@ -473,7 +520,7 @@ const MAT_NATIVE_DATE_FORMATS = {
             month: 'numeric',
             day: 'numeric',
             hour: 'numeric',
-            minute: 'numeric'
+            minute: 'numeric',
         },
         timeInput: { hour: 'numeric', minute: 'numeric' },
         monthInput: { month: 'short', year: 'numeric' },
@@ -485,7 +532,7 @@ const MAT_NATIVE_DATE_FORMATS = {
         monthYearLabel: { year: 'numeric', month: 'short' },
         monthYearA11yLabel: { year: 'numeric', month: 'long' },
         timeLabel: { hours: 'numeric', minutes: 'numeric' },
-    }
+    },
 };
 
 /**
@@ -505,36 +552,34 @@ const MAT_NATIVE_DATE_FORMATS = {
  */
 class NativeDateModule {
 }
-/** @nocollapse */ /** @nocollapse */ NativeDateModule.ɵfac = function NativeDateModule_Factory(t) { return new (t || NativeDateModule)(); };
-/** @nocollapse */ /** @nocollapse */ NativeDateModule.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: NativeDateModule });
-/** @nocollapse */ /** @nocollapse */ NativeDateModule.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ providers: [
+/** @nocollapse */ /** @nocollapse */ NativeDateModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NativeDateModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+/** @nocollapse */ /** @nocollapse */ NativeDateModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NativeDateModule, imports: [PlatformModule] });
+/** @nocollapse */ /** @nocollapse */ NativeDateModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NativeDateModule, providers: [
         { provide: DateAdapter, useClass: NativeDateAdapter },
         { provide: DateAdapter$1, useClass: NativeDateAdapter },
     ], imports: [[PlatformModule]] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NativeDateModule, [{
-        type: NgModule,
-        args: [{
-                imports: [PlatformModule],
-                providers: [
-                    { provide: DateAdapter, useClass: NativeDateAdapter },
-                    { provide: DateAdapter$1, useClass: NativeDateAdapter },
-                ],
-            }]
-    }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(NativeDateModule, { imports: [PlatformModule] }); })();
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: NativeDateModule, decorators: [{
+            type: NgModule,
+            args: [{
+                    imports: [PlatformModule],
+                    providers: [
+                        { provide: DateAdapter, useClass: NativeDateAdapter },
+                        { provide: DateAdapter$1, useClass: NativeDateAdapter },
+                    ],
+                }]
+        }] });
 class MatNativeDateModule {
 }
-/** @nocollapse */ /** @nocollapse */ MatNativeDateModule.ɵfac = function MatNativeDateModule_Factory(t) { return new (t || MatNativeDateModule)(); };
-/** @nocollapse */ /** @nocollapse */ MatNativeDateModule.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: MatNativeDateModule });
-/** @nocollapse */ /** @nocollapse */ MatNativeDateModule.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ providers: [{ provide: MAT_DATE_FORMATS, useValue: MAT_NATIVE_DATE_FORMATS }], imports: [[NativeDateModule]] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MatNativeDateModule, [{
-        type: NgModule,
-        args: [{
-                imports: [NativeDateModule],
-                providers: [{ provide: MAT_DATE_FORMATS, useValue: MAT_NATIVE_DATE_FORMATS }],
-            }]
-    }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MatNativeDateModule, { imports: [NativeDateModule] }); })();
+/** @nocollapse */ /** @nocollapse */ MatNativeDateModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatNativeDateModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+/** @nocollapse */ /** @nocollapse */ MatNativeDateModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatNativeDateModule, imports: [NativeDateModule] });
+/** @nocollapse */ /** @nocollapse */ MatNativeDateModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatNativeDateModule, providers: [{ provide: MAT_DATE_FORMATS, useValue: MAT_NATIVE_DATE_FORMATS }], imports: [[NativeDateModule]] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatNativeDateModule, decorators: [{
+            type: NgModule,
+            args: [{
+                    imports: [NativeDateModule],
+                    providers: [{ provide: MAT_DATE_FORMATS, useValue: MAT_NATIVE_DATE_FORMATS }],
+                }]
+        }] });
 
 /**
  * Generated bundle index. Do not edit.

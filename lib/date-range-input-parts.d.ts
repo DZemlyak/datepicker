@@ -69,7 +69,7 @@ declare abstract class MatDateRangeInputPartBase<D> extends MatDatepickerInputBa
     /** Gets the date filter function from the range input. */
     protected _getDateFilter(): DateFilterFn<D>;
     protected _parentDisabled(): boolean;
-    protected _shouldHandleChangeEvent({ source }: DateSelectionModelChange<DateRange<D>>): boolean;
+    protected _shouldHandleChangeEvent({ source, }: DateSelectionModelChange<DateRange<D>>): boolean;
     protected _assignValueProgrammatically(value: D | null): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MatDateRangeInputPartBase<any>, [null, null, null, null, { optional: true; }, { optional: true; }, { optional: true; }, { optional: true; }]>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<MatDateRangeInputPartBase<any>, never, never, {}, {}, never>;
@@ -104,4 +104,3 @@ export declare class MatEndDate<D> extends _MatDateRangeInputBase<D> implements 
     static ɵdir: i0.ɵɵDirectiveDeclaration<MatEndDate<any>, "input[matEndDate]", never, { "errorStateMatcher": "errorStateMatcher"; }, { "dateChange": "dateChange"; "dateInput": "dateInput"; }, never>;
 }
 export {};
-//# sourceMappingURL=date-range-input-parts.d.ts.map

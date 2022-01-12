@@ -46,4 +46,3 @@ export declare class DefaultMatCalendarRangeStrategy<D> implements MatDateRangeS
 export declare function MAT_CALENDAR_RANGE_STRATEGY_PROVIDER_FACTORY(parent: MatDateRangeSelectionStrategy<unknown>, adapter: DateAdapter<unknown>): MatDateRangeSelectionStrategy<unknown>;
 /** @docs-private */
 export declare const MAT_CALENDAR_RANGE_STRATEGY_PROVIDER: FactoryProvider;
-//# sourceMappingURL=date-range-selection-strategy.d.ts.map

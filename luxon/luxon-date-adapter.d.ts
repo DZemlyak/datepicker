@@ -79,4 +79,3 @@ export declare class LuxonDateAdapter extends DateAdapter<DateTime> {
     static ɵfac: i0.ɵɵFactoryDeclaration<LuxonDateAdapter, [{ optional: true; }, { optional: true; }]>;
     static ɵprov: i0.ɵɵInjectableDeclaration<LuxonDateAdapter>;
 }
-//# sourceMappingURL=luxon-date-adapter.d.ts.map

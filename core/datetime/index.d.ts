@@ -14,4 +14,3 @@ export declare class MatNativeDateModule {
     static ɵmod: i0.ɵɵNgModuleDeclaration<MatNativeDateModule, never, [typeof NativeDateModule], never>;
     static ɵinj: i0.ɵɵInjectorDeclaration<MatNativeDateModule>;
 }
-//# sourceMappingURL=index.d.ts.map

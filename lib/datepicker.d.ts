@@ -5,4 +5,3 @@ export declare class MatDatepicker<D> extends MatDatepickerBase<MatDatepickerCon
     static ɵfac: i0.ɵɵFactoryDeclaration<MatDatepicker<any>, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MatDatepicker<any>, "mat-datepicker", ["matDatepicker"], {}, {}, never, never>;
 }
-//# sourceMappingURL=datepicker.d.ts.map

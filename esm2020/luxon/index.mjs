@@ -15,9 +15,9 @@ export * from './luxon-date-adapter';
 export * from './luxon-date-formats';
 export class LuxonDateModule {
 }
-/** @nocollapse */ /** @nocollapse */ LuxonDateModule.ɵfac = function LuxonDateModule_Factory(t) { return new (t || LuxonDateModule)(); };
-/** @nocollapse */ /** @nocollapse */ LuxonDateModule.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: LuxonDateModule });
-/** @nocollapse */ /** @nocollapse */ LuxonDateModule.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ providers: [
+/** @nocollapse */ /** @nocollapse */ LuxonDateModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LuxonDateModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+/** @nocollapse */ /** @nocollapse */ LuxonDateModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LuxonDateModule });
+/** @nocollapse */ /** @nocollapse */ LuxonDateModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LuxonDateModule, providers: [
         {
             provide: DateAdapter,
             useClass: LuxonDateAdapter,
@@ -29,34 +29,33 @@ export class LuxonDateModule {
             deps: [MAT_DATE_LOCALE, MAT_LUXON_DATE_ADAPTER_OPTIONS],
         },
     ] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(LuxonDateModule, [{
-        type: NgModule,
-        args: [{
-                providers: [
-                    {
-                        provide: DateAdapter,
-                        useClass: LuxonDateAdapter,
-                        deps: [MAT_DATE_LOCALE, MAT_LUXON_DATE_ADAPTER_OPTIONS],
-                    },
-                    {
-                        provide: MaterialDateAdapter,
-                        useClass: LuxonDateAdapter,
-                        deps: [MAT_DATE_LOCALE, MAT_LUXON_DATE_ADAPTER_OPTIONS],
-                    },
-                ],
-            }]
-    }], null, null); })();
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LuxonDateModule, decorators: [{
+            type: NgModule,
+            args: [{
+                    providers: [
+                        {
+                            provide: DateAdapter,
+                            useClass: LuxonDateAdapter,
+                            deps: [MAT_DATE_LOCALE, MAT_LUXON_DATE_ADAPTER_OPTIONS],
+                        },
+                        {
+                            provide: MaterialDateAdapter,
+                            useClass: LuxonDateAdapter,
+                            deps: [MAT_DATE_LOCALE, MAT_LUXON_DATE_ADAPTER_OPTIONS],
+                        },
+                    ],
+                }]
+        }] });
 export class MatLuxonDateModule {
 }
-/** @nocollapse */ /** @nocollapse */ MatLuxonDateModule.ɵfac = function MatLuxonDateModule_Factory(t) { return new (t || MatLuxonDateModule)(); };
-/** @nocollapse */ /** @nocollapse */ MatLuxonDateModule.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: MatLuxonDateModule });
-/** @nocollapse */ /** @nocollapse */ MatLuxonDateModule.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ providers: [{ provide: MAT_DATE_FORMATS, useValue: MAT_LUXON_DATE_FORMATS }], imports: [[LuxonDateModule]] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MatLuxonDateModule, [{
-        type: NgModule,
-        args: [{
-                imports: [LuxonDateModule],
-                providers: [{ provide: MAT_DATE_FORMATS, useValue: MAT_LUXON_DATE_FORMATS }],
-            }]
-    }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MatLuxonDateModule, { imports: [LuxonDateModule] }); })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi9saWJzL2RhdGVwaWNrZXIvbHV4b24vaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7OztHQU1HO0FBRUgsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUN6QyxPQUFPLEVBQ0wsV0FBVyxJQUFJLG1CQUFtQixFQUNsQyxnQkFBZ0IsRUFDaEIsZUFBZSxHQUNoQixNQUFNLHdCQUF3QixDQUFDO0FBQ2hDLE9BQU8sRUFBRSxXQUFXLEVBQUUsTUFBTSx5QkFBeUIsQ0FBQztBQUN0RCxPQUFPLEVBQ0wsOEJBQThCLEVBQzlCLGdCQUFnQixHQUNqQixNQUFNLHNCQUFzQixDQUFDO0FBQzlCLE9BQU8sRUFBRSxzQkFBc0IsRUFBRSxNQUFNLHNCQUFzQixDQUFDOztBQUU5RCxjQUFjLHNCQUFzQixDQUFDO0FBQ3JDLGNBQWMsc0JBQXNCLENBQUM7QUFnQnJDLE1BQU0sT0FBTyxlQUFlOztvSEFBZixlQUFlO21IQUFmLGVBQWU7d0hBYmY7UUFDVDtZQUNFLE9BQU8sRUFBRSxXQUFXO1lBQ3BCLFFBQVEsRUFBRSxnQkFBZ0I7WUFDMUIsSUFBSSxFQUFFLENBQUMsZUFBZSxFQUFFLDhCQUE4QixDQUFDO1NBQ3hEO1FBQ0Q7WUFDRSxPQUFPLEVBQUUsbUJBQW1CO1lBQzVCLFFBQVEsRUFBRSxnQkFBZ0I7WUFDMUIsSUFBSSxFQUFFLENBQUMsZUFBZSxFQUFFLDhCQUE4QixDQUFDO1NBQ3hEO0tBQ0Y7dUZBRVUsZUFBZTtjQWQzQixRQUFRO2VBQUM7Z0JBQ1IsU0FBUyxFQUFFO29CQUNUO3dCQUNFLE9BQU8sRUFBRSxXQUFXO3dCQUNwQixRQUFRLEVBQUUsZ0JBQWdCO3dCQUMxQixJQUFJLEVBQUUsQ0FBQyxlQUFlLEVBQUUsOEJBQThCLENBQUM7cUJBQ3hEO29CQUNEO3dCQUNFLE9BQU8sRUFBRSxtQkFBbUI7d0JBQzVCLFFBQVEsRUFBRSxnQkFBZ0I7d0JBQzFCLElBQUksRUFBRSxDQUFDLGVBQWUsRUFBRSw4QkFBOEIsQ0FBQztxQkFDeEQ7aUJBQ0Y7YUFDRjs7QUFPRCxNQUFNLE9BQU8sa0JBQWtCOzswSEFBbEIsa0JBQWtCO3NIQUFsQixrQkFBa0I7MkhBRmxCLENBQUMsRUFBRSxPQUFPLEVBQUUsZ0JBQWdCLEVBQUUsUUFBUSxFQUFFLHNCQUFzQixFQUFFLENBQUMsWUFEbkUsQ0FBQyxlQUFlLENBQUM7dUZBR2Ysa0JBQWtCO2NBSjlCLFFBQVE7ZUFBQztnQkFDUixPQUFPLEVBQUUsQ0FBQyxlQUFlLENBQUM7Z0JBQzFCLFNBQVMsRUFBRSxDQUFDLEVBQUUsT0FBTyxFQUFFLGdCQUFnQixFQUFFLFFBQVEsRUFBRSxzQkFBc0IsRUFBRSxDQUFDO2FBQzdFOzt3RkFDWSxrQkFBa0IsY0FObEIsZUFBZSIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBAbGljZW5zZVxyXG4gKiBDb3B5cmlnaHQgR29vZ2xlIExMQyBBbGwgUmlnaHRzIFJlc2VydmVkLlxyXG4gKlxyXG4gKiBVc2Ugb2YgdGhpcyBzb3VyY2UgY29kZSBpcyBnb3Zlcm5lZCBieSBhbiBNSVQtc3R5bGUgbGljZW5zZSB0aGF0IGNhbiBiZVxyXG4gKiBmb3VuZCBpbiB0aGUgTElDRU5TRSBmaWxlIGF0IGh0dHBzOi8vYW5ndWxhci5pby9saWNlbnNlXHJcbiAqL1xyXG5cclxuaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcclxuaW1wb3J0IHtcclxuICBEYXRlQWRhcHRlciBhcyBNYXRlcmlhbERhdGVBZGFwdGVyLFxyXG4gIE1BVF9EQVRFX0ZPUk1BVFMsXHJcbiAgTUFUX0RBVEVfTE9DQUxFLFxyXG59IGZyb20gJ0Bhbmd1bGFyL21hdGVyaWFsL2NvcmUnO1xyXG5pbXBvcnQgeyBEYXRlQWRhcHRlciB9IGZyb20gJ0BtYXRoZW8vZGF0ZXBpY2tlci9jb3JlJztcclxuaW1wb3J0IHtcclxuICBNQVRfTFVYT05fREFURV9BREFQVEVSX09QVElPTlMsXHJcbiAgTHV4b25EYXRlQWRhcHRlcixcclxufSBmcm9tICcuL2x1eG9uLWRhdGUtYWRhcHRlcic7XHJcbmltcG9ydCB7IE1BVF9MVVhPTl9EQVRFX0ZPUk1BVFMgfSBmcm9tICcuL2x1eG9uLWRhdGUtZm9ybWF0cyc7XHJcblxyXG5leHBvcnQgKiBmcm9tICcuL2x1eG9uLWRhdGUtYWRhcHRlcic7XHJcbmV4cG9ydCAqIGZyb20gJy4vbHV4b24tZGF0ZS1mb3JtYXRzJztcclxuXHJcbkBOZ01vZHVsZSh7XHJcbiAgcHJvdmlkZXJzOiBbXHJcbiAgICB7XHJcbiAgICAgIHByb3ZpZGU6IERhdGVBZGFwdGVyLFxyXG4gICAgICB1c2VDbGFzczogTHV4b25EYXRlQWRhcHRlcixcclxuICAgICAgZGVwczogW01BVF9EQVRFX0xPQ0FMRSwgTUFUX0xVWE9OX0RBVEVfQURBUFRFUl9PUFRJT05TXSxcclxuICAgIH0sXHJcbiAgICB7XHJcbiAgICAgIHByb3ZpZGU6IE1hdGVyaWFsRGF0ZUFkYXB0ZXIsXHJcbiAgICAgIHVzZUNsYXNzOiBMdXhvbkRhdGVBZGFwdGVyLFxyXG4gICAgICBkZXBzOiBbTUFUX0RBVEVfTE9DQUxFLCBNQVRfTFVYT05fREFURV9BREFQVEVSX09QVElPTlNdLFxyXG4gICAgfSxcclxuICBdLFxyXG59KVxyXG5leHBvcnQgY2xhc3MgTHV4b25EYXRlTW9kdWxlIHt9XHJcblxyXG5ATmdNb2R1bGUoe1xyXG4gIGltcG9ydHM6IFtMdXhvbkRhdGVNb2R1bGVdLFxyXG4gIHByb3ZpZGVyczogW3sgcHJvdmlkZTogTUFUX0RBVEVfRk9STUFUUywgdXNlVmFsdWU6IE1BVF9MVVhPTl9EQVRFX0ZPUk1BVFMgfV0sXHJcbn0pXHJcbmV4cG9ydCBjbGFzcyBNYXRMdXhvbkRhdGVNb2R1bGUge31cclxuIl19
+/** @nocollapse */ /** @nocollapse */ MatLuxonDateModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatLuxonDateModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+/** @nocollapse */ /** @nocollapse */ MatLuxonDateModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatLuxonDateModule, imports: [LuxonDateModule] });
+/** @nocollapse */ /** @nocollapse */ MatLuxonDateModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatLuxonDateModule, providers: [{ provide: MAT_DATE_FORMATS, useValue: MAT_LUXON_DATE_FORMATS }], imports: [[LuxonDateModule]] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatLuxonDateModule, decorators: [{
+            type: NgModule,
+            args: [{
+                    imports: [LuxonDateModule],
+                    providers: [{ provide: MAT_DATE_FORMATS, useValue: MAT_LUXON_DATE_FORMATS }],
+                }]
+        }] });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi9saWJzL2RhdGVwaWNrZXIvbHV4b24vaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7OztHQU1HO0FBRUgsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUN6QyxPQUFPLEVBQ0wsV0FBVyxJQUFJLG1CQUFtQixFQUNsQyxnQkFBZ0IsRUFDaEIsZUFBZSxHQUNoQixNQUFNLHdCQUF3QixDQUFDO0FBQ2hDLE9BQU8sRUFBRSxXQUFXLEVBQUUsTUFBTSx5QkFBeUIsQ0FBQztBQUN0RCxPQUFPLEVBQ0wsOEJBQThCLEVBQzlCLGdCQUFnQixHQUNqQixNQUFNLHNCQUFzQixDQUFDO0FBQzlCLE9BQU8sRUFBRSxzQkFBc0IsRUFBRSxNQUFNLHNCQUFzQixDQUFDOztBQUU5RCxjQUFjLHNCQUFzQixDQUFDO0FBQ3JDLGNBQWMsc0JBQXNCLENBQUM7QUFnQnJDLE1BQU0sT0FBTyxlQUFlOztrSkFBZixlQUFlO21KQUFmLGVBQWU7bUpBQWYsZUFBZSxhQWJmO1FBQ1Q7WUFDRSxPQUFPLEVBQUUsV0FBVztZQUNwQixRQUFRLEVBQUUsZ0JBQWdCO1lBQzFCLElBQUksRUFBRSxDQUFDLGVBQWUsRUFBRSw4QkFBOEIsQ0FBQztTQUN4RDtRQUNEO1lBQ0UsT0FBTyxFQUFFLG1CQUFtQjtZQUM1QixRQUFRLEVBQUUsZ0JBQWdCO1lBQzFCLElBQUksRUFBRSxDQUFDLGVBQWUsRUFBRSw4QkFBOEIsQ0FBQztTQUN4RDtLQUNGOzJGQUVVLGVBQWU7a0JBZDNCLFFBQVE7bUJBQUM7b0JBQ1IsU0FBUyxFQUFFO3dCQUNUOzRCQUNFLE9BQU8sRUFBRSxXQUFXOzRCQUNwQixRQUFRLEVBQUUsZ0JBQWdCOzRCQUMxQixJQUFJLEVBQUUsQ0FBQyxlQUFlLEVBQUUsOEJBQThCLENBQUM7eUJBQ3hEO3dCQUNEOzRCQUNFLE9BQU8sRUFBRSxtQkFBbUI7NEJBQzVCLFFBQVEsRUFBRSxnQkFBZ0I7NEJBQzFCLElBQUksRUFBRSxDQUFDLGVBQWUsRUFBRSw4QkFBOEIsQ0FBQzt5QkFDeEQ7cUJBQ0Y7aUJBQ0Y7O0FBT0QsTUFBTSxPQUFPLGtCQUFrQjs7cUpBQWxCLGtCQUFrQjtzSkFBbEIsa0JBQWtCLFlBTmxCLGVBQWU7c0pBTWYsa0JBQWtCLGFBRmxCLENBQUMsRUFBRSxPQUFPLEVBQUUsZ0JBQWdCLEVBQUUsUUFBUSxFQUFFLHNCQUFzQixFQUFFLENBQUMsWUFEbkUsQ0FBQyxlQUFlLENBQUM7MkZBR2Ysa0JBQWtCO2tCQUo5QixRQUFRO21CQUFDO29CQUNSLE9BQU8sRUFBRSxDQUFDLGVBQWUsQ0FBQztvQkFDMUIsU0FBUyxFQUFFLENBQUMsRUFBRSxPQUFPLEVBQUUsZ0JBQWdCLEVBQUUsUUFBUSxFQUFFLHNCQUFzQixFQUFFLENBQUM7aUJBQzdFIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAqIEBsaWNlbnNlXHJcbiAqIENvcHlyaWdodCBHb29nbGUgTExDIEFsbCBSaWdodHMgUmVzZXJ2ZWQuXHJcbiAqXHJcbiAqIFVzZSBvZiB0aGlzIHNvdXJjZSBjb2RlIGlzIGdvdmVybmVkIGJ5IGFuIE1JVC1zdHlsZSBsaWNlbnNlIHRoYXQgY2FuIGJlXHJcbiAqIGZvdW5kIGluIHRoZSBMSUNFTlNFIGZpbGUgYXQgaHR0cHM6Ly9hbmd1bGFyLmlvL2xpY2Vuc2VcclxuICovXHJcblxyXG5pbXBvcnQgeyBOZ01vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xyXG5pbXBvcnQge1xyXG4gIERhdGVBZGFwdGVyIGFzIE1hdGVyaWFsRGF0ZUFkYXB0ZXIsXHJcbiAgTUFUX0RBVEVfRk9STUFUUyxcclxuICBNQVRfREFURV9MT0NBTEUsXHJcbn0gZnJvbSAnQGFuZ3VsYXIvbWF0ZXJpYWwvY29yZSc7XHJcbmltcG9ydCB7IERhdGVBZGFwdGVyIH0gZnJvbSAnQG1hdGhlby9kYXRlcGlja2VyL2NvcmUnO1xyXG5pbXBvcnQge1xyXG4gIE1BVF9MVVhPTl9EQVRFX0FEQVBURVJfT1BUSU9OUyxcclxuICBMdXhvbkRhdGVBZGFwdGVyLFxyXG59IGZyb20gJy4vbHV4b24tZGF0ZS1hZGFwdGVyJztcclxuaW1wb3J0IHsgTUFUX0xVWE9OX0RBVEVfRk9STUFUUyB9IGZyb20gJy4vbHV4b24tZGF0ZS1mb3JtYXRzJztcclxuXHJcbmV4cG9ydCAqIGZyb20gJy4vbHV4b24tZGF0ZS1hZGFwdGVyJztcclxuZXhwb3J0ICogZnJvbSAnLi9sdXhvbi1kYXRlLWZvcm1hdHMnO1xyXG5cclxuQE5nTW9kdWxlKHtcclxuICBwcm92aWRlcnM6IFtcclxuICAgIHtcclxuICAgICAgcHJvdmlkZTogRGF0ZUFkYXB0ZXIsXHJcbiAgICAgIHVzZUNsYXNzOiBMdXhvbkRhdGVBZGFwdGVyLFxyXG4gICAgICBkZXBzOiBbTUFUX0RBVEVfTE9DQUxFLCBNQVRfTFVYT05fREFURV9BREFQVEVSX09QVElPTlNdLFxyXG4gICAgfSxcclxuICAgIHtcclxuICAgICAgcHJvdmlkZTogTWF0ZXJpYWxEYXRlQWRhcHRlcixcclxuICAgICAgdXNlQ2xhc3M6IEx1eG9uRGF0ZUFkYXB0ZXIsXHJcbiAgICAgIGRlcHM6IFtNQVRfREFURV9MT0NBTEUsIE1BVF9MVVhPTl9EQVRFX0FEQVBURVJfT1BUSU9OU10sXHJcbiAgICB9LFxyXG4gIF0sXHJcbn0pXHJcbmV4cG9ydCBjbGFzcyBMdXhvbkRhdGVNb2R1bGUge31cclxuXHJcbkBOZ01vZHVsZSh7XHJcbiAgaW1wb3J0czogW0x1eG9uRGF0ZU1vZHVsZV0sXHJcbiAgcHJvdmlkZXJzOiBbeyBwcm92aWRlOiBNQVRfREFURV9GT1JNQVRTLCB1c2VWYWx1ZTogTUFUX0xVWE9OX0RBVEVfRk9STUFUUyB9XSxcclxufSlcclxuZXhwb3J0IGNsYXNzIE1hdEx1eG9uRGF0ZU1vZHVsZSB7fVxyXG4iXX0=

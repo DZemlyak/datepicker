@@ -95,7 +95,7 @@ export declare class MatMonthView<D> implements AfterContentInit, OnChanges, OnD
     /** Focuses the active cell after the microtask queue is empty. */
     _focusActiveCell(movePreview?: boolean): void;
     /** Called when the user has activated a new cell and the preview needs to be updated. */
-    _previewChanged({ event, value: cell }: MatCalendarUserEvent<MatCalendarCell<D> | null>): void;
+    _previewChanged({ event, value: cell, }: MatCalendarUserEvent<MatCalendarCell<D> | null>): void;
     /** Initializes the weekdays. */
     private _initWeekdays;
     /** Creates MatCalendarCells for the dates in this month. */
@@ -120,4 +120,3 @@ export declare class MatMonthView<D> implements AfterContentInit, OnChanges, OnD
     static ɵfac: i0.ɵɵFactoryDeclaration<MatMonthView<any>, [null, { optional: true; }, { optional: true; }, { optional: true; }, { optional: true; }]>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MatMonthView<any>, "mat-month-view", ["matMonthView"], { "activeDate": "activeDate"; "selected": "selected"; "minDate": "minDate"; "maxDate": "maxDate"; "dateFilter": "dateFilter"; "dateClass": "dateClass"; "comparisonStart": "comparisonStart"; "comparisonEnd": "comparisonEnd"; }, { "selectedChange": "selectedChange"; "_userSelection": "_userSelection"; "activeDateChange": "activeDateChange"; }, never, never>;
 }
-//# sourceMappingURL=month-view.d.ts.map

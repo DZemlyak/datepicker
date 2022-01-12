@@ -7,4 +7,3 @@
  */
 import { MatDateFormats } from '@matheo/datepicker/core';
 export declare const MAT_LUXON_DATE_FORMATS: MatDateFormats;
-//# sourceMappingURL=luxon-date-formats.d.ts.map

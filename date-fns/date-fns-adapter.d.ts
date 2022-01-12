@@ -71,4 +71,3 @@ export declare class DateFnsAdapter extends DateAdapter<Date> {
     static ɵfac: i0.ɵɵFactoryDeclaration<DateFnsAdapter, [{ optional: true; }, null, { optional: true; }]>;
     static ɵprov: i0.ɵɵInjectableDeclaration<DateFnsAdapter>;
 }
-//# sourceMappingURL=date-fns-adapter.d.ts.map

@@ -7,4 +7,3 @@
  */
 import { MatDateFormats } from '@matheo/datepicker/core';
 export declare const MAT_DATE_FNS_FORMATS: MatDateFormats;
-//# sourceMappingURL=date-fns-formats.d.ts.map

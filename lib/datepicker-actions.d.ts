@@ -38,4 +38,3 @@ export declare class MatDatepickerActions implements AfterViewInit, OnDestroy {
     static ɵfac: i0.ɵɵFactoryDeclaration<MatDatepickerActions, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MatDatepickerActions, "mat-datepicker-actions, mat-date-range-picker-actions", never, {}, {}, never, ["*"]>;
 }
-//# sourceMappingURL=datepicker-actions.d.ts.map

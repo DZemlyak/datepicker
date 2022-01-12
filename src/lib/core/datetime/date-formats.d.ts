@@ -28,4 +28,3 @@ export declare type MatDateFormats = {
         timeLabel: any;
     };
 };
-//# sourceMappingURL=date-formats.d.ts.map

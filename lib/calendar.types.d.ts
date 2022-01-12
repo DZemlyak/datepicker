@@ -8,4 +8,3 @@ export declare type MatCalendarType = 'date' | 'datetime' | 'time' | 'month' | '
  * @docs-private
  */
 export declare type MatCalendarView = 'minute' | 'hour' | 'month' | 'year' | 'multi-year';
-//# sourceMappingURL=calendar.types.d.ts.map

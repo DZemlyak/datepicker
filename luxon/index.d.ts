@@ -11,4 +11,3 @@ export declare class MatLuxonDateModule {
     static ɵmod: i0.ɵɵNgModuleDeclaration<MatLuxonDateModule, never, [typeof LuxonDateModule], never>;
     static ɵinj: i0.ɵɵInjectorDeclaration<MatLuxonDateModule>;
 }
-//# sourceMappingURL=index.d.ts.map

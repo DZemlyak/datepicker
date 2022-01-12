@@ -256,12 +256,11 @@ class DateFnsAdapter extends DateAdapter {
         return new Date(year, month, date, hours, minutes, seconds, ms);
     }
 }
-/** @nocollapse */ /** @nocollapse */ DateFnsAdapter.ɵfac = function DateFnsAdapter_Factory(t) { return new (t || DateFnsAdapter)(i0.ɵɵinject(MAT_DATE_LOCALE, 8), i0.ɵɵinject(MAT_DATE_FNS_LOCALES), i0.ɵɵinject(MAT_DATE_FNS_ADAPTER_OPTIONS, 8)); };
-/** @nocollapse */ /** @nocollapse */ DateFnsAdapter.ɵprov = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjectable({ token: DateFnsAdapter, factory: DateFnsAdapter.ɵfac });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateFnsAdapter, [{
+/** @nocollapse */ /** @nocollapse */ DateFnsAdapter.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DateFnsAdapter, deps: [{ token: MAT_DATE_LOCALE, optional: true }, { token: MAT_DATE_FNS_LOCALES }, { token: MAT_DATE_FNS_ADAPTER_OPTIONS, optional: true }], target: i0.ɵɵFactoryTarget.Injectable });
+/** @nocollapse */ /** @nocollapse */ DateFnsAdapter.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DateFnsAdapter });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DateFnsAdapter, decorators: [{
             type: Injectable
-        }], function () {
+        }], ctorParameters: function () {
         return [{ type: undefined, decorators: [{
                         type: Optional
                     }, {
@@ -276,8 +275,7 @@ class DateFnsAdapter extends DateAdapter {
                         type: Inject,
                         args: [MAT_DATE_FNS_ADAPTER_OPTIONS]
                     }] }];
-    }, null);
-})();
+    } });
 
 /**
  * @license
@@ -320,9 +318,9 @@ const MAT_DATE_FNS_FORMATS = {
  */
 class DateFnsModule {
 }
-/** @nocollapse */ /** @nocollapse */ DateFnsModule.ɵfac = function DateFnsModule_Factory(t) { return new (t || DateFnsModule)(); };
-/** @nocollapse */ /** @nocollapse */ DateFnsModule.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: DateFnsModule });
-/** @nocollapse */ /** @nocollapse */ DateFnsModule.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ providers: [
+/** @nocollapse */ /** @nocollapse */ DateFnsModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DateFnsModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+/** @nocollapse */ /** @nocollapse */ DateFnsModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DateFnsModule });
+/** @nocollapse */ /** @nocollapse */ DateFnsModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DateFnsModule, providers: [
         {
             provide: DateAdapter,
             useClass: DateFnsAdapter,
@@ -334,8 +332,7 @@ class DateFnsModule {
             deps: [MAT_DATE_LOCALE, MAT_DATE_FNS_LOCALES, MAT_DATE_FNS_ADAPTER_OPTIONS],
         },
     ] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateFnsModule, [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: DateFnsModule, decorators: [{
             type: NgModule,
             args: [{
                     providers: [
@@ -351,18 +348,16 @@ class DateFnsModule {
                         },
                     ],
                 }]
-        }], null, null);
-})();
+        }] });
 class MatDateFnsModule {
 }
-/** @nocollapse */ /** @nocollapse */ MatDateFnsModule.ɵfac = function MatDateFnsModule_Factory(t) { return new (t || MatDateFnsModule)(); };
-/** @nocollapse */ /** @nocollapse */ MatDateFnsModule.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: MatDateFnsModule });
-/** @nocollapse */ /** @nocollapse */ MatDateFnsModule.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ providers: [
+/** @nocollapse */ /** @nocollapse */ MatDateFnsModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatDateFnsModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+/** @nocollapse */ /** @nocollapse */ MatDateFnsModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatDateFnsModule, imports: [DateFnsModule] });
+/** @nocollapse */ /** @nocollapse */ MatDateFnsModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatDateFnsModule, providers: [
         { provide: MAT_DATE_FORMATS, useValue: MAT_DATE_FNS_FORMATS },
         { provide: MAT_DATE_FNS_LOCALES, useValue: [] },
     ], imports: [[DateFnsModule]] });
-(function () {
-    (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MatDateFnsModule, [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatDateFnsModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [DateFnsModule],
@@ -371,9 +366,7 @@ class MatDateFnsModule {
                         { provide: MAT_DATE_FNS_LOCALES, useValue: [] },
                     ],
                 }]
-        }], null, null);
-})();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MatDateFnsModule, { imports: [DateFnsModule] }); })();
+        }] });
 
 /**
  * Generated bundle index. Do not edit.

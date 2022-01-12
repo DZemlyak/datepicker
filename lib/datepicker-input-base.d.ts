@@ -141,4 +141,3 @@ export declare abstract class MatDatepickerInputBase<S, D = ExtractDateTypeFromS
  * callback has any changes, accounting for date objects.
  */
 export declare function dateInputsHaveChanged(changes: SimpleChanges, adapter: DateAdapter<unknown>, unit?: DateUnit): boolean;
-//# sourceMappingURL=datepicker-input-base.d.ts.map

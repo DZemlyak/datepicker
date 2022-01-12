@@ -246,21 +246,21 @@ class LuxonDateAdapter extends DateAdapter {
         };
     }
 }
-/** @nocollapse */ /** @nocollapse */ LuxonDateAdapter.ɵfac = function LuxonDateAdapter_Factory(t) { return new (t || LuxonDateAdapter)(i0.ɵɵinject(MAT_DATE_LOCALE, 8), i0.ɵɵinject(MAT_LUXON_DATE_ADAPTER_OPTIONS, 8)); };
-/** @nocollapse */ /** @nocollapse */ LuxonDateAdapter.ɵprov = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjectable({ token: LuxonDateAdapter, factory: LuxonDateAdapter.ɵfac });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(LuxonDateAdapter, [{
-        type: Injectable
-    }], function () { return [{ type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [MAT_DATE_LOCALE]
-            }] }, { type: undefined, decorators: [{
-                type: Optional
-            }, {
-                type: Inject,
-                args: [MAT_LUXON_DATE_ADAPTER_OPTIONS]
-            }] }]; }, null); })();
+/** @nocollapse */ /** @nocollapse */ LuxonDateAdapter.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LuxonDateAdapter, deps: [{ token: MAT_DATE_LOCALE, optional: true }, { token: MAT_LUXON_DATE_ADAPTER_OPTIONS, optional: true }], target: i0.ɵɵFactoryTarget.Injectable });
+/** @nocollapse */ /** @nocollapse */ LuxonDateAdapter.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LuxonDateAdapter });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LuxonDateAdapter, decorators: [{
+            type: Injectable
+        }], ctorParameters: function () { return [{ type: undefined, decorators: [{
+                    type: Optional
+                }, {
+                    type: Inject,
+                    args: [MAT_DATE_LOCALE]
+                }] }, { type: undefined, decorators: [{
+                    type: Optional
+                }, {
+                    type: Inject,
+                    args: [MAT_LUXON_DATE_ADAPTER_OPTIONS]
+                }] }]; } });
 
 /**
  * @license
@@ -302,9 +302,9 @@ const MAT_LUXON_DATE_FORMATS = {
  */
 class LuxonDateModule {
 }
-/** @nocollapse */ /** @nocollapse */ LuxonDateModule.ɵfac = function LuxonDateModule_Factory(t) { return new (t || LuxonDateModule)(); };
-/** @nocollapse */ /** @nocollapse */ LuxonDateModule.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: LuxonDateModule });
-/** @nocollapse */ /** @nocollapse */ LuxonDateModule.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ providers: [
+/** @nocollapse */ /** @nocollapse */ LuxonDateModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LuxonDateModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+/** @nocollapse */ /** @nocollapse */ LuxonDateModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LuxonDateModule });
+/** @nocollapse */ /** @nocollapse */ LuxonDateModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LuxonDateModule, providers: [
         {
             provide: DateAdapter,
             useClass: LuxonDateAdapter,
@@ -316,36 +316,35 @@ class LuxonDateModule {
             deps: [MAT_DATE_LOCALE, MAT_LUXON_DATE_ADAPTER_OPTIONS],
         },
     ] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(LuxonDateModule, [{
-        type: NgModule,
-        args: [{
-                providers: [
-                    {
-                        provide: DateAdapter,
-                        useClass: LuxonDateAdapter,
-                        deps: [MAT_DATE_LOCALE, MAT_LUXON_DATE_ADAPTER_OPTIONS],
-                    },
-                    {
-                        provide: DateAdapter$1,
-                        useClass: LuxonDateAdapter,
-                        deps: [MAT_DATE_LOCALE, MAT_LUXON_DATE_ADAPTER_OPTIONS],
-                    },
-                ],
-            }]
-    }], null, null); })();
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: LuxonDateModule, decorators: [{
+            type: NgModule,
+            args: [{
+                    providers: [
+                        {
+                            provide: DateAdapter,
+                            useClass: LuxonDateAdapter,
+                            deps: [MAT_DATE_LOCALE, MAT_LUXON_DATE_ADAPTER_OPTIONS],
+                        },
+                        {
+                            provide: DateAdapter$1,
+                            useClass: LuxonDateAdapter,
+                            deps: [MAT_DATE_LOCALE, MAT_LUXON_DATE_ADAPTER_OPTIONS],
+                        },
+                    ],
+                }]
+        }] });
 class MatLuxonDateModule {
 }
-/** @nocollapse */ /** @nocollapse */ MatLuxonDateModule.ɵfac = function MatLuxonDateModule_Factory(t) { return new (t || MatLuxonDateModule)(); };
-/** @nocollapse */ /** @nocollapse */ MatLuxonDateModule.ɵmod = /** @pureOrBreakMyCode */ i0.ɵɵdefineNgModule({ type: MatLuxonDateModule });
-/** @nocollapse */ /** @nocollapse */ MatLuxonDateModule.ɵinj = /** @pureOrBreakMyCode */ i0.ɵɵdefineInjector({ providers: [{ provide: MAT_DATE_FORMATS, useValue: MAT_LUXON_DATE_FORMATS }], imports: [[LuxonDateModule]] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MatLuxonDateModule, [{
-        type: NgModule,
-        args: [{
-                imports: [LuxonDateModule],
-                providers: [{ provide: MAT_DATE_FORMATS, useValue: MAT_LUXON_DATE_FORMATS }],
-            }]
-    }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MatLuxonDateModule, { imports: [LuxonDateModule] }); })();
+/** @nocollapse */ /** @nocollapse */ MatLuxonDateModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatLuxonDateModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+/** @nocollapse */ /** @nocollapse */ MatLuxonDateModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatLuxonDateModule, imports: [LuxonDateModule] });
+/** @nocollapse */ /** @nocollapse */ MatLuxonDateModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatLuxonDateModule, providers: [{ provide: MAT_DATE_FORMATS, useValue: MAT_LUXON_DATE_FORMATS }], imports: [[LuxonDateModule]] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.3", ngImport: i0, type: MatLuxonDateModule, decorators: [{
+            type: NgModule,
+            args: [{
+                    imports: [LuxonDateModule],
+                    providers: [{ provide: MAT_DATE_FORMATS, useValue: MAT_LUXON_DATE_FORMATS }],
+                }]
+        }] });
 
 /**
  * Generated bundle index. Do not edit.

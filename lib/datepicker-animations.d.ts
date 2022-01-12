@@ -15,4 +15,3 @@ export declare const matDatepickerAnimations: {
     readonly fadeInCalendar: AnimationTriggerMetadata;
     readonly controlActive: AnimationTriggerMetadata;
 };
-//# sourceMappingURL=datepicker-animations.d.ts.map

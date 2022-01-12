@@ -222,4 +222,3 @@ export declare abstract class DateAdapter<D> {
      */
     clampDate(date: D, min?: D | null, max?: D | null, unit?: DateUnit): D;
 }
-//# sourceMappingURL=date-adapter.d.ts.map

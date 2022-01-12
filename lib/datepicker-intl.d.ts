@@ -44,4 +44,3 @@ export declare class MatDatepickerIntl {
     static ɵfac: i0.ɵɵFactoryDeclaration<MatDatepickerIntl, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<MatDatepickerIntl>;
 }
-//# sourceMappingURL=datepicker-intl.d.ts.map
