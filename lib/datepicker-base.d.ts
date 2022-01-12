@@ -12,7 +12,7 @@ import { ComponentType, TemplatePortal } from '@angular/cdk/portal';
 import { AfterViewInit, ElementRef, EventEmitter, InjectionToken, NgZone, OnDestroy, ViewContainerRef, ChangeDetectorRef, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { CanColor, ThemePalette } from '@angular/material/core';
 import { Subject, Observable } from 'rxjs';
-import { DateAdapter } from './core';
+import { DateAdapter } from '@matheo/datepicker/core';
 import { MatCalendar } from './calendar';
 import { MatCalendarType, MatCalendarView } from './calendar.types';
 import { MatCalendarUserEvent, MatCalendarCellClassFunction } from './calendar-body';

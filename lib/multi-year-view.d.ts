@@ -1,6 +1,6 @@
 import { AfterContentInit, ChangeDetectorRef, EventEmitter, OnDestroy } from '@angular/core';
 import { Directionality } from '@angular/cdk/bidi';
-import { DateAdapter } from './core';
+import { DateAdapter } from '@matheo/datepicker/core';
 import { MatCalendarBody, MatCalendarCell, MatCalendarUserEvent, MatCalendarCellClassFunction } from './calendar-body';
 import { DateRange } from './date-selection-model';
 import { DateFilterFn } from './datepicker-input-base';

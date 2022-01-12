@@ -72,14 +72,6 @@
       "es2015": "./fesm2015/matheo-datepicker-luxon.mjs",
       "node": "./fesm2015/matheo-datepicker-luxon.mjs",
       "default": "./fesm2020/matheo-datepicker-luxon.mjs"
-    },
-    "./src/lib/core": {
-      "types": "./src/lib/core/matheo-datepicker-src-lib-core.d.ts",
-      "esm2020": "./esm2020/src/lib/core/matheo-datepicker-src-lib-core.mjs",
-      "es2020": "./fesm2020/matheo-datepicker-src-lib-core.mjs",
-      "es2015": "./fesm2015/matheo-datepicker-src-lib-core.mjs",
-      "node": "./fesm2015/matheo-datepicker-src-lib-core.mjs",
-      "default": "./fesm2020/matheo-datepicker-src-lib-core.mjs"
     }
   },
   "sideEffects": false

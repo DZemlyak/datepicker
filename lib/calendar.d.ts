@@ -8,7 +8,7 @@
 import { ComponentType, Portal } from '@angular/cdk/portal';
 import { AfterContentInit, AfterViewChecked, ChangeDetectorRef, EventEmitter, OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
 import { Subject } from 'rxjs';
-import { DateAdapter, DateUnit, MatDateFormats } from './core';
+import { DateAdapter, DateUnit, MatDateFormats } from '@matheo/datepicker/core';
 import { MatCalendarUserEvent, MatCalendarCellClassFunction } from './calendar-body';
 import { MatCalendarType, MatCalendarView } from './calendar.types';
 import { MatDatepickerIntl } from './datepicker-intl';

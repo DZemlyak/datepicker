@@ -1,6 +1,6 @@
 import { AfterContentInit, ChangeDetectorRef, EventEmitter, OnDestroy, SimpleChanges, OnChanges } from '@angular/core';
 import { Directionality } from '@angular/cdk/bidi';
-import { DateAdapter, MatDateFormats } from './core';
+import { DateAdapter, MatDateFormats } from '@matheo/datepicker/core';
 import { MatCalendarBody, MatCalendarCell, MatCalendarUserEvent, MatCalendarCellClassFunction } from './calendar-body';
 import { DateRange } from './date-selection-model';
 import { MatDateRangeSelectionStrategy } from './date-range-selection-strategy';
@@ -95,7 +95,7 @@ export declare class MatMonthView<D> implements AfterContentInit, OnChanges, OnD
     /** Focuses the active cell after the microtask queue is empty. */
     _focusActiveCell(movePreview?: boolean): void;
     /** Called when the user has activated a new cell and the preview needs to be updated. */
-    _previewChanged({ event, value: cell, }: MatCalendarUserEvent<MatCalendarCell<D> | null>): void;
+    _previewChanged({ event, value: cell }: MatCalendarUserEvent<MatCalendarCell<D> | null>): void;
     /** Initializes the weekdays. */
     private _initWeekdays;
     /** Creates MatCalendarCells for the dates in this month. */

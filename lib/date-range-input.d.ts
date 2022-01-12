@@ -12,7 +12,7 @@ import { NgControl, ControlContainer } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { FocusOrigin } from '@angular/cdk/a11y';
 import { BooleanInput } from '@angular/cdk/coercion';
-import { DateAdapter } from './core';
+import { DateAdapter } from '@matheo/datepicker/core';
 import { MatStartDate, MatEndDate, MatDateRangeInputParent } from './date-range-input-parts';
 import { MatDatepickerControl, MatDatepickerPanel } from './datepicker-base';
 import { DateFilterFn } from './datepicker-input-base';

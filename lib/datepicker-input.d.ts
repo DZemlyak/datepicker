@@ -9,7 +9,7 @@ import { ElementRef, OnDestroy } from '@angular/core';
 import { ValidatorFn } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
 import { MatFormField } from '@angular/material/form-field';
-import { DateAdapter, MatDateFormats } from './core';
+import { DateAdapter, MatDateFormats } from '@matheo/datepicker/core';
 import { MatDatepickerInputBase, DateFilterFn } from './datepicker-input-base';
 import { MatDatepickerControl, MatDatepickerPanel } from './datepicker-base';
 import { DateSelectionModelChange } from './date-selection-model';

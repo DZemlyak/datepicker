@@ -9,7 +9,7 @@ import { BooleanInput } from '@angular/cdk/coercion';
 import { ElementRef, EventEmitter, OnDestroy, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
 import { AbstractControl, ControlValueAccessor, ValidationErrors, Validator, ValidatorFn } from '@angular/forms';
 import { Subject } from 'rxjs';
-import { DateAdapter, DateUnit, MatDateFormats } from './core';
+import { DateAdapter, DateUnit, MatDateFormats } from '@matheo/datepicker/core';
 import { MatCalendarType } from './calendar.types';
 import { ExtractDateTypeFromSelection, MatDateSelectionModel, DateSelectionModelChange } from './date-selection-model';
 import * as i0 from "@angular/core";

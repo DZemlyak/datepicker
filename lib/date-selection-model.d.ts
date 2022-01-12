@@ -7,7 +7,7 @@
  */
 import { FactoryProvider, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
-import { DateAdapter } from './core';
+import { DateAdapter } from '@matheo/datepicker/core';
 import * as i0 from "@angular/core";
 /** A class representing a range of dates. */
 export declare class DateRange<D> {

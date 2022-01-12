@@ -1,5 +1,5 @@
 import { AfterContentInit, AfterViewInit, ChangeDetectorRef, ElementRef, EventEmitter } from '@angular/core';
-import { DateAdapter, MatDateFormats } from './core';
+import { DateAdapter, MatDateFormats } from '@matheo/datepicker/core';
 import { MatCalendarCellClassFunction, MatCalendarUserEvent } from './calendar-body';
 import { DateFilterFn } from './datepicker-input-base';
 import * as i0 from "@angular/core";

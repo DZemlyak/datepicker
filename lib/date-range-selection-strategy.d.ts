@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 import { InjectionToken, FactoryProvider } from '@angular/core';
-import { DateAdapter } from './core';
+import { DateAdapter } from '@matheo/datepicker/core';
 import { DateRange } from './date-selection-model';
 import * as i0 from "@angular/core";
 /** Injection token used to customize the date range selection behavior. */

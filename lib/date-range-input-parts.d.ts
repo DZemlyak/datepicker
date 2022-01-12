@@ -8,7 +8,7 @@
 import { ElementRef, InjectionToken, OnInit, Injector, DoCheck } from '@angular/core';
 import { NgForm, FormGroupDirective, NgControl, ValidatorFn } from '@angular/forms';
 import { CanUpdateErrorState, ErrorStateMatcher } from '@angular/material/core';
-import { DateAdapter, MatDateFormats } from './core';
+import { DateAdapter, MatDateFormats } from '@matheo/datepicker/core';
 import { MatDatepickerInputBase, DateFilterFn } from './datepicker-input-base';
 import { DateRange, DateSelectionModelChange } from './date-selection-model';
 import * as i0 from "@angular/core";
@@ -69,7 +69,7 @@ declare abstract class MatDateRangeInputPartBase<D> extends MatDatepickerInputBa
     /** Gets the date filter function from the range input. */
     protected _getDateFilter(): DateFilterFn<D>;
     protected _parentDisabled(): boolean;
-    protected _shouldHandleChangeEvent({ source, }: DateSelectionModelChange<DateRange<D>>): boolean;
+    protected _shouldHandleChangeEvent({ source }: DateSelectionModelChange<DateRange<D>>): boolean;
     protected _assignValueProgrammatically(value: D | null): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MatDateRangeInputPartBase<any>, [null, null, null, null, { optional: true; }, { optional: true; }, { optional: true; }, { optional: true; }]>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<MatDateRangeInputPartBase<any>, never, never, {}, {}, never>;
